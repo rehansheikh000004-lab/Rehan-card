@@ -4,78 +4,276 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REHAN OS | Digital Architect</title>
+<title>REHAN | Black Reserve Edition</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
 
-<link rel="stylesheet" href="style.css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+font-family:'Inter',sans-serif;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:white;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#6e001f44,transparent 70%);
+top:-200px;
+left:-150px;
+filter:blur(100px);
+animation:float1 10s infinite alternate;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#d4af3730,transparent 70%);
+bottom:-250px;
+right:-150px;
+filter:blur(100px);
+animation:float2 10s infinite alternate;
+}
+
+@keyframes float1{
+to{
+transform:translateY(100px);
+}
+}
+
+@keyframes float2{
+to{
+transform:translateY(-100px);
+}
+}
+
+.card{
+position:relative;
+width:420px;
+padding:50px;
+border-radius:35px;
+background:rgba(255,255,255,.04);
+backdrop-filter:blur(30px);
+overflow:hidden;
+box-shadow:
+0 0 60px rgba(212,175,55,.08);
+animation:appear 1.5s ease;
+}
+
+.card::before{
+content:'';
+position:absolute;
+inset:0;
+padding:2px;
+border-radius:35px;
+background:linear-gradient(
+45deg,
+#d4af37,
+#6e001f,
+#d4af37
+);
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+animation:borderMove 6s linear infinite;
+}
+
+@keyframes borderMove{
+100%{
+filter:hue-rotate(360deg);
+}
+}
+
+@keyframes appear{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.profile{
+width:140px;
+height:140px;
+border-radius:50%;
+margin:auto;
+display:block;
+object-fit:cover;
+border:3px solid #d4af37;
+box-shadow:0 0 40px rgba(212,175,55,.4);
+}
+
+.name{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:55px;
+margin-top:25px;
+letter-spacing:3px;
+}
+
+.role{
+text-align:center;
+color:#d4af37;
+font-size:15px;
+letter-spacing:4px;
+margin-top:10px;
+text-transform:uppercase;
+}
+
+.tagline{
+text-align:center;
+margin-top:20px;
+color:#d0d0d0;
+line-height:1.8;
+font-size:14px;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.btn{
+text-decoration:none;
+padding:15px;
+border-radius:15px;
+text-align:center;
+font-weight:500;
+transition:.4s;
+}
+
+.portfolio{
+background:linear-gradient(45deg,#6e001f,#8a0d2d);
+color:white;
+}
+
+.whatsapp{
+background:#d4af37;
+color:black;
+}
+
+.email{
+background:#111;
+border:1px solid #d4af37;
+color:white;
+}
+
+.linkedin{
+background:#0a66c2;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 30px rgba(212,175,55,.25);
+}
+
+.qr-section{
+margin-top:35px;
+text-align:center;
+}
+
+.qr-section img{
+width:130px;
+border-radius:15px;
+padding:10px;
+background:white;
+}
+
+.scan{
+margin-top:10px;
+font-size:12px;
+letter-spacing:2px;
+color:#999;
+}
+
+.footer{
+text-align:center;
+margin-top:25px;
+font-size:11px;
+letter-spacing:4px;
+color:#666;
+}
+
+</style>
 </head>
 
 <body>
 
-<div id="loader">
+<div class="card">
 
-<div class="terminal">
+<img src="your-photo.jpg" class="profile">
 
-<p>INITIALIZING REHAN OS...</p>
-<p>CONNECTING TO DIGITAL ARCHITECT...</p>
-<p>ACCESS GRANTED</p>
+<h1 class="name">REHAN</h1>
 
+<div class="role">
+FULL STACK DEVELOPER
 </div>
 
-</div>
-
-<div id="particles"></div>
-
-<div class="spotlight"></div>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="status">
-PRIVATE DIGITAL EXPERIENCE
-</div>
-
-<h1>
-REHAN
-</h1>
-
-<h2>
-DIGITAL ARCHITECT
-</h2>
-
-<p class="description">
-I build premium digital experiences for businesses
-that refuse to look ordinary.
+<p class="tagline">
+Building Modern Digital Experiences
+For Premium Businesses &
+Luxury Brands Worldwide
 </p>
 
 <div class="buttons">
 
-<a href="#" class="btn primary">
-ENTER PORTFOLIO
+<a href="https://yourportfolio.com" class="btn portfolio">
+View Portfolio
 </a>
 
-<a href="https://wa.me/91YOURNUMBER" class="btn">
-WHATSAPP
+<a href="https://wa.me/919999999999" class="btn whatsapp">
+WhatsApp Me
 </a>
 
-<a href="#" class="btn">
-BOOK PROJECT
+<a href="mailto:your@email.com" class="btn email">
+Email Me
+</a>
+
+<a href="https://linkedin.com/in/yourprofile" class="btn linkedin">
+LinkedIn
 </a>
 
 </div>
 
+<div class="qr-section">
+
+<img src="qr-code.png">
+
+<div class="scan">
+SCAN TO CONNECT
 </div>
 
-<div class="luxury-orb"></div>
+</div>
 
-</section>
+<div class="footer">
+BLACK RESERVE EDITION
+</div>
 
-<script src="script.js"></script>
+</div>
 
 </body>
 </html>
