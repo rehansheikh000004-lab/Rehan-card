@@ -1,21 +1,36 @@
-const particles = document.getElementById("particles");
+setTimeout(() => {
 
-for(let i=0;i<40;i++){
+document.getElementById("loader").style.display="none";
 
-let span=document.createElement("span");
+document.body.style.overflow="auto";
 
-span.style.position="fixed";
-span.style.width="3px";
-span.style.height="3px";
-span.style.background="white";
+},3000);
 
-span.style.left=Math.random()*100+"vw";
-span.style.top=Math.random()*100+"vh";
+const particles=document.getElementById("particles");
 
-span.style.opacity=Math.random();
+for(let i=0;i<80;i++){
 
-span.style.borderRadius="50%";
+let p=document.createElement("span");
 
-particles.appendChild(span);
+let size=Math.random()*3+1;
+
+p.style.width=size+"px";
+p.style.height=size+"px";
+
+p.style.left=Math.random()*100+"vw";
+p.style.top=Math.random()*100+"vh";
+
+p.style.opacity=Math.random();
+
+particles.appendChild(p);
 
 }
+
+const spotlight=document.querySelector(".spotlight");
+
+document.addEventListener("mousemove",(e)=>{
+
+spotlight.style.left=e.clientX+"px";
+spotlight.style.top=e.clientY+"px";
+
+});
