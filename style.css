@@ -379,3 +379,59 @@ font-size:28px;
 
 color:#7a0019;
 }
+
+/* QR */
+
+.qr-section{
+
+padding:120px 8%;
+}
+
+.qr-card{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:80px;
+
+padding:60px;
+
+border-radius:40px;
+
+background:
+linear-gradient(
+135deg,
+#0f0f0f,
+#1a1a1a
+);
+
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.qr-left h2{
+
+font-size:80px;
+
+line-height:0.9;
+
+margin:20px 0;
+}
+
+.qr-left p{
+
+max-width:450px;
+
+line-height:2;
+
+opacity:.8;
+}
+
+.qr-right img{
+
+width:250px;
+
+border-radius:20px;
+}
