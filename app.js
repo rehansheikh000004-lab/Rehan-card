@@ -326,3 +326,27 @@ console.log(
 "Luxury Portfolio Experience"
 
 );
+
+const bookingForm =
+document.querySelector(
+".booking-form"
+);
+
+if(bookingForm){
+
+bookingForm.addEventListener(
+"submit",
+(e)=>{
+
+e.preventDefault();
+
+alert(
+"Thank you. Your project request has been received."
+);
+
+bookingForm.reset();
+
+}
+);
+
+}
