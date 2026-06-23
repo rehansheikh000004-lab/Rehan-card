@@ -144,3 +144,56 @@ object-fit:cover;
 
 border-radius:30px;
 }
+
+/* STATS */
+
+.stats{
+
+padding:100px 8%;
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:30px;
+}
+
+.stat-card{
+
+background:
+rgba(255,255,255,0.03);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+padding:50px;
+
+border-radius:30px;
+
+text-align:center;
+
+transition:.4s;
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+border-color:#7a0019;
+}
+
+.stat-card h2{
+
+font-size:60px;
+
+color:#7a0019;
+
+margin-bottom:10px;
+}
+
+.stat-card p{
+
+opacity:.8;
+}
