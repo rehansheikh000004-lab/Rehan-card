@@ -298,3 +298,84 @@ line-height:2;
 
 opacity:.8;
 }
+
+/* CONTACT HUB */
+
+.contact-hub{
+
+padding:140px 8%;
+
+text-align:center;
+}
+
+.contact-subtitle{
+
+max-width:700px;
+
+margin:20px auto 80px;
+
+line-height:2;
+
+opacity:.8;
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:30px;
+}
+
+.contact-card{
+
+background:
+rgba(255,255,255,0.03);
+
+border:1px solid rgba(255,255,255,0.08);
+
+padding:50px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+color:white;
+
+transition:.4s;
+
+position:relative;
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+border-color:#7a0019;
+}
+
+.contact-card h3{
+
+font-size:32px;
+
+margin-bottom:15px;
+}
+
+.contact-card p{
+
+opacity:.8;
+}
+
+.contact-card span{
+
+position:absolute;
+
+top:30px;
+right:30px;
+
+font-size:28px;
+
+color:#7a0019;
+}
