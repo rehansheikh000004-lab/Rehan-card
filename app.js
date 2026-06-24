@@ -351,14 +351,16 @@ bookingForm.reset();
 
 }
 
-const themeBtn =
+/* THEME TOGGLE */
+
+const themeButton =
 document.getElementById(
 "theme-toggle"
 );
 
-themeBtn.addEventListener(
+themeButton.addEventListener(
 "click",
-()=>{
+function(){
 
 document.body.classList.toggle(
 "light-theme"
@@ -370,39 +372,17 @@ document.body.classList.contains(
 )
 ){
 
-themeBtn.innerHTML = "🌙";
-
-localStorage.setItem(
-"theme",
-"light"
-);
+themeButton.innerHTML =
+"☀️";
 
 }
 
 else{
 
-themeBtn.innerHTML = "☀";
-
-localStorage.setItem(
-"theme",
-"dark"
-);
+themeButton.innerHTML =
+"🌙";
 
 }
 
 }
 );
-
-if(
-localStorage.getItem(
-"theme"
-)==="light"
-){
-
-document.body.classList.add(
-"light-theme"
-);
-
-themeBtn.innerHTML = "🌙";
-
-}
