@@ -886,3 +886,56 @@ box-shadow:
 0 0 30px rgba(122,0,25,.5);
 
 }
+
+#theme-toggle{
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+margin-left:20px;
+
+}
+
+.light-theme{
+
+background:#f5f1ea;
+
+color:#111;
+
+}
+
+.light-theme header{
+
+background:
+rgba(255,255,255,.9);
+
+}
+
+.light-theme .service-card,
+.light-theme .project-card,
+.light-theme .contact-card,
+.light-theme .stat-card{
+
+background:white;
+
+color:#111;
+
+border:
+1px solid rgba(0,0,0,.08);
+
+}
+
+.light-theme .primary-btn{
+
+background:#7a0019;
+
+color:white;
+
+}
